@@ -1,0 +1,331 @@
+.quiz-section {
+    background-color: #F5D6DD;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.quizcontainer {
+     max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: relative;
+    overflow: hidden;
+}
+#start-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.start-content {
+    display: flex;
+    background-color: #F5D6DD;
+    overflow: hidden;
+  height:100%;
+}
+.start-image {
+    flex: 1;
+}
+.start-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.start-text {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.start-text img {
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+.start-text p {
+    font-size: 15px;
+    color: rgba(216, 54, 150, 1);
+    margin-bottom: 30px;
+    line-height:19px;
+}
+#start-quiz {
+    align-self: center;
+}
+
+.question {
+    display: none;
+    /* opacity: 0; */
+    /* transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; */
+}
+.question.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+.question.prev {
+    transform: translateX(-100%);
+}
+.progress-bar {
+    display: none;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    max-width: 340px;
+    margin: 0 auto;
+    margin-top: 95px;
+    margin-bottom: 96px;
+    height: 6px;
+    width: 100%;
+}
+
+.progress-step {
+    width: 24%;
+    height: 4px;
+    background-color: #f8a5c2;
+    transition: background-color 0.5s ease;
+    display: inherit !important;
+    border-radius:19px;
+}
+
+.progress-step.active {
+    background-color: #e84393;
+}
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+p{
+  text-align: center;
+  font-size: 15px;
+}
+.options {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 115px;
+    justify-content: space-evenly;
+    
+}
+.option {
+ overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 13%;
+  min-width: 141px;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+.option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 119px;
+    height: 119px;
+    margin: 0 auto;
+    border: 3px solid #F5D6DD;
+    transition: border-color 0.3s ease;
+}
+.option-label {
+    color: rgba(16, 16, 16, 0.5);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+.option.selected img{
+    border-color:#e84393;
+}
+.option.selected .option-label {
+    color: #101010;
+}
+#results p{
+    max-width: 905px;
+    font-size: 15px;
+    line-height: 19px;
+    margin: 0 auto;
+}
+.button-group {
+    display: none;
+    justify-content: center;
+}
+.btn {
+    padding: 18px 38px 18px 38px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    min-width: 188px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn:hover {
+    opacity: 0.9;
+}
+.btn-primary {
+    background-color: #e84393;
+    color: white;
+    border: 2px solid #e84393;
+}
+.btn-secondary {
+    background-color: white;
+    color: #e84393;
+    border: 2px solid #e84393;
+    margin-right: 10px;
+}
+#restart-quiz{
+    display: none;
+    justify-content: center;
+    margin-bottom: 39px;
+}
+.restart {
+    text-align: center;
+    margin-top: 39px;
+}
+.restart a {
+    color: #e84393;
+    text-decoration: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.question {
+    display: none;
+    position: relative;
+}
+.question.active {
+    display: block;
+}
+
+#product-recommendations{
+   display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  justify-content: center;
+  gap: 23px;
+}
+
+.product{
+    min-width: none;
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product img{
+    max-height: 341px;
+}
+
+.productname-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productname-price h3{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 17px;
+}
+#results .productname-price p{
+  margin: 0;
+  font-size: 17px;
+}
+
+#question3 .options{
+    max-width: 750px;
+    margin: 0 auto;
+    margin-top: 38px;
+    margin-bottom: 178px;
+}
+
+#question3 .option{
+  /* padding: 18px 38px 18px 38px; */
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: rgba(216, 54, 150, 0.2);
+  color: rgba(16, 16, 16, 1);
+  font-size: 16px;
+  line-height: 19.2px;
+  width: 31.33%;
+  justify-content: center;
+  margin: 0;
+  border: 3px solid rgba(216, 54, 150, 0.2);
+  max-width: inherit;
+  align-items: center;
+  margin-bottom: 19px;
+  max-width: 206px;
+  min-height: 45px;
+}
+
+#question3 .option.selected{
+    border-color: rgba(216, 54, 150, 1);
+}
+
+#question3 .option .option-label{
+    color: #000;
+}
+
+#question3 .option img{
+    display:none;
+ }
+
+ @media only screen and (max-width: 1000px){
+    .start-image{
+        display: none;
+    }
+    .progress-bar{
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+ }
+
+ @media only screen and (max-width: 600px){
+    .option{
+        width: 48%;
+        margin-bottom: 21.48px;
+    }
+    #question3 .option{
+        width: 48%;
+        margin-bottom: 18px;
+    }
+    .product{
+        width: 48%;
+    }
+    .productname-price{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .productname-price h3{
+        margin-bottom: 14px;
+        font-size: 17px;
+    }
+    #product-recommendations .productname-price p{
+        font-size: 17px; 
+        margin-top:0;
+        margin-bottom:30px;
+    }
+   #product-recommendations{
+     padding:0 15px;
+   }
+ }

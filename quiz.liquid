@@ -1,0 +1,28 @@
+{{ 'quiz.css' | asset_url | stylesheet_tag }}
+
+<section class="quiz-section">
+    <div class="quizcontainer container">
+    </div>
+</section>
+
+<script src="{{ 'quiz.js' | asset_url }}" defer></script>
+<script>
+  window.quizDataUrl = '{{ "quiz-data.json" | asset_url }}';
+</script>
+
+{% schema %}
+{
+"name": "Section name",
+"settings": [],
+"presets": [
+{
+"name": "Quiz",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}

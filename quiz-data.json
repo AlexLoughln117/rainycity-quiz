@@ -1,0 +1,54 @@
+{
+  "quizData": [
+    {
+      "id": "question1",
+      "title": "What is your hair type?",
+      "instruction": "Select all that apply",
+      "options": [
+        { "value": "straight", "label": "STRAIGHT", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/straight.png?v=1717104204" },
+        { "value": "wavy", "label": "WAVY", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/wavy.png?v=1717104204" },
+        { "value": "curly", "label": "LOOSE CURLS", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/loose.png?v=1717104204" },
+        { "value": "coily", "label": "COILS", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/coils.png?v=1717104204" },
+        { "value": "spirals", "label": "SPIRALS", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/spirals.png?v=1717104204" },
+        { "value": "ringlets", "label": "RINGLETS", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/ringlets.png?v=1717104204" },
+        { "value": "corkscrew curls", "label": "CORKSCREW CURLS", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/corkscrew.png?v=1717104204" }
+      ]
+    },
+    {
+      "id": "question2",
+      "title": "What is your hair concern?",
+      "instruction": "Select all that apply",
+      "options": [
+        { "value": "dry-frizzy", "label": "DRY & FRIZZY", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/dry.png?v=1717104221" },
+        { "value": "damaged", "label": "DAMAGED & OVER PROCESSED", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/damaged.png?v=1717104221" },
+        { "value": "dull", "label": "DULL & LACKS SHINE", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/shine.png?v=1717104221" },
+        { "value": "blonde", "label": "BLONDE CARE", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/blonde-care.png?v=1717104221" },
+        { "value": "blonde-tones", "label": "VIBRANT BLONDE TONES", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/vibrant.png?v=1717104220" },
+        { "value": "curl-care", "label": "CURL CARE", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/curl-care.png?v=1717104221" }
+      ]
+    },
+    {
+      "id": "question3",
+      "title": "How do you style your hair?",
+      "instruction": "Select all that apply",
+      "options": [
+        { "value": "hair-dryer", "label": "HAIR DRYER" },
+        { "value": "air-dry", "label": "AIR DRY" },
+        { "value": "protective-braids", "label": "PROTECTIVE BRAIDS" },
+        { "value": "straightner", "label": "STRAIGHTENER" },
+        { "value": "curling-iron", "label": "CURLING IRON" },
+        { "value": "none", "label": "NONE" }
+      ]
+    }
+  ],
+  "products": [
+    { "name": "Hydrating Shampoo", "price": "10", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/LeeStafford-CocoLoco_HeatProtection_PackShot-Shopify_990x_4e1ba55c-8527-4924-a7ac-fffcbca6aa2a.webp?v=1713214229", "forTypes": ["wavy", "curly", "coily"], "forConcerns": ["dry-frizzy", "damaged"], "forStyling": ["air-dry", "protective-braids"] },
+    { "name": "Volumizing Conditioner", "price": "10", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/LeeStafford-Styling_Anti-HumiditySpray_Packshot-Shopify_990x_11a84962-1377-468f-9cd3-26cb6b7ad220.webp?v=1713214080", "forTypes": ["straight", "wavy"], "forConcerns": ["dull", "breakage"], "forStyling": ["hair-dryer"] },
+    { "name": "Curl Defining Cream", "price": "10", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/LeeStafford-Styling_Anti-HumiditySpray_Packshot-Shopify_990x_11a84962-1377-468f-9cd3-26cb6b7ad220.webp?v=1713214080", "forTypes": ["wavy", "curly", "coily"], "forConcerns": ["dry-frizzy"], "forStyling": ["air-dry"] },
+    { "name": "Color Protection Serum", "price": "10", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/LeeStafford-Styling_Anti-HumiditySpray_Packshot-Shopify_990x_11a84962-1377-468f-9cd3-26cb6b7ad220.webp?v=1713214080", "forTypes": ["all"], "forConcerns": ["damaged"], "forStyling": ["all"] },
+    { "name": "Repair & Strengthen Mask", "price": "10", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/LeeStafford-Styling_Anti-HumiditySpray_Packshot-Shopify_990x_11a84962-1377-468f-9cd3-26cb6b7ad220.webp?v=1713214080", "forTypes": ["all"], "forConcerns": ["damaged", "breakage"], "forStyling": ["hair-dryer"] },
+    { "name": "Smoothing Oil", "price": "10", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/LeeStafford-ForTheLoveOfCurls_Conditioner_PackShot-Shopify_990x_1cf0623d-514d-43ba-bddb-43d964bd342b.webp?v=1713119782", "forTypes": ["wavy", "curly", "coily"], "forConcerns": ["dry-frizzy", "dull"], "forStyling": ["air-dry"] },
+    { "name": "Scalp Treatment", "price": "10", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/LeeStafford-ForTheLoveOfCurls_Conditioner_PackShot-Shopify_990x_1cf0623d-514d-43ba-bddb-43d964bd342b.webp?v=1713119782", "forTypes": ["all"], "forConcerns": ["breakage"], "forStyling": ["all"] },
+    { "name": "Heat Protectant Spray", "price": "10", "image": "https://cdn.shopify.com/s/files/1/0761/8176/6464/files/LeeStafford-GrowStrongLong_Shampoo_PackShot-Shopify_990x_8ec87bfe-bd8f-405f-a596-d018877b37bf.webp?v=1713119437", "forTypes": ["all"], "forConcerns": ["damaged"], "forStyling": ["hair-dryer"] }
+  ]
+}
