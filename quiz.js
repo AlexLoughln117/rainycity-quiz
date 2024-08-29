@@ -74,15 +74,17 @@ function createQuestions() {
         questionElement.id = question.id;
         questionElement.className = 'question';
         questionElement.innerHTML = `
-            <h1>${question.title}</h1>
-            <p>${question.instruction}</p>
-            <div class="options options-${question.id}">
-                ${question.options.map(option => `
-                    <div class="option" data-value="${option.value}">
-                        <img src="${option.image}" alt="${option.label}">
-                        <div class="option-label">${option.label}</div>
-                    </div>
-                `).join('')}
+            <div class="question-content">
+                <h1>${question.title}</h1>
+                <p>${question.instruction}</p>
+                <div class="options options-${question.id}">
+                    ${question.options.map(option => `
+                        <div class="option" data-value="${option.value}">
+                            <img src="${option.image}" alt="${option.label}">
+                            <div class="option-label">${option.label}</div>
+                        </div>
+                    `).join('')}
+                </div>
             </div>
         `;
         return questionElement;
@@ -128,8 +130,13 @@ function showQuestion(index) {
     questions.forEach((q, i) => {
         if (i === 0) { 
             q.style.display = 'none';
+        } else if (i === index + 1) {
+            q.style.display = 'block';
+            q.classList.add('slide-in');
+            setTimeout(() => q.classList.remove('slide-in'), 500);
         } else {
-            q.style.display = i === index + 1 ? 'block' : 'none';
+            q.style.display = 'none';
+            q.classList.remove('slide-in');
         }
     });
     progressSteps.forEach((step, i) => {
@@ -184,19 +191,21 @@ function showResults() {
     resultsElement.id = 'results';
     resultsElement.className = 'question';
     resultsElement.innerHTML = `
-        <h1>Your suggested products</h1>
-        <p>Fusce gravida cursus arcu, imperdiet placerat neque mollis ut. In hac habitasse platea dictumst. Cras aliquet eros vel augue convallis.</p>
-        <div id="product-recommendations">
-            ${recommendations.map(product => `
-                <div class="product">
-                    <img src="${product.image}" alt="${product.name}">
-                    <div class="productname-price">
-                    <h3>${product.name}</h3>
-                    <p>£${product.price}</p>
+        <div class="question-content">
+            <h1>Your suggested products</h1>
+            <p>Fusce gravida cursus arcu, imperdiet placerat neque mollis ut. In hac habitasse platea dictumst. Cras aliquet eros vel augue convallis.</p>
+            <div id="product-recommendations">
+                ${recommendations.map(product => `
+                    <div class="product">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="productname-price">
+                        <h3>${product.name}</h3>
+                        <p>£${product.price}</p>
+                        </div>
+                        <button class="btn btn-primary">ADD TO CART</button>
                     </div>
-                    <button class="btn btn-primary">ADD TO CART</button>
-                </div>
-            `).join('')}
+                `).join('')}
+            </div>
         </div>
     `;
 
@@ -205,6 +214,8 @@ function showResults() {
     existingQuestions.forEach(q => q.style.display = 'none');
     container.insertBefore(resultsElement, container.querySelector('.button-group'));
     resultsElement.style.display = 'block';
+    resultsElement.classList.add('slide-in');
+    setTimeout(() => resultsElement.classList.remove('slide-in'), 500);
     const buttonGroup = document.querySelector('.button-group');
     buttonGroup.style.display = 'none';
     currentQuestion = quizData.length;
